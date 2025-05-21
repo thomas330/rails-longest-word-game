@@ -1,0 +1,8 @@
+<p><%= @grid.join(' ') %></p>
+
+<form action="/score" method="POST">
+  <label for="word">Enter a word: </label>
+  <input type="text" name="word">
+  <input type="submit">
+  <%= hidden_field_tag :grid, @grid.join('') %>
+</form>
